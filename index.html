@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TO DO FULL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300&family=Raleway:wght@200;300&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300&family=Raleway:wght@200;300&family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-container" id="blur">  
+        <div class="heading-row">            
+            <p class="heading-1">Tasks <span class="heading-2">List</span></p>    
+            <p class='btn' onclick="Add_list_popup()"><i class="fa fa-plus-circle"></i> <span class='addItem'>Add Item</span>
+            </p>
+        </div>
+        <div class="to-do-list">        
+        </div>
+        <div id='instruction'>No Items in the todo list</div>  
+    </div>
+
+    <div class="main-container" id="blur-2">
+        <div class="heading-row">                  
+            <p class='back' onclick="goBack()"><i class="fas fa-arrow-alt-circle-left"></i> Back</p>
+            <h1 class="heading-1" id='currentHeading'></h1>
+            <p class='btn' onclick="Add_list_popup()"><i class="fa fa-plus-circle"></i></p>
+        </div>
+        <div class="flex-row-center">
+            <div class="card-2">
+                <p class="card-heading" id='currentHeading-1'></p>
+                <ul id='subTaskList' style="list-style-type:none;">
+                </ul>
+                <div class='add-remove-2'>     
+                    <button class='btn-remove' onclick="removeToDo(this)"><i class="fa fa-trash"></i></button>   
+                    <p class='btn-add' onclick="Add_item_popup(this)"><i class="fa fa-plus-circle"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="pop">
+            <p class="popup-text">Add New List</p>
+            <input type="text" id='listHeading' placeholder="Add New List">
+        <div class="button-container">
+            <button type="button" onclick="addTodo()">Add</button>
+            <button type="button" onclick="Add_list_popup()">Close</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popAddItem">
+            <p class="popup-text">Add New Item</p>
+            <input type="text" id='subListHeading' placeholder="Add New Item">
+        <div class="button-container">
+            <button type="button" onclick="addSubTodo()">Add</button>
+            <button type="button" onclick="Add_item_popup()">Close</button>
+        </div>
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
