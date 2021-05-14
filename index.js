@@ -83,6 +83,21 @@ function Add_item_popup(item) {
   popup.classList.toggle("active");
 }
 
+var input = document.getElementById("listHeading");
+var input2 = document.getElementById("subListHeading");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+input2.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("subtodo-myBtn").click();
+  }
+});
+
 function addTodo() {
   let heading = document.querySelector("#listHeading").value;
   if (heading !== "") {
