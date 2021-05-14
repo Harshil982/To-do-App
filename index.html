@@ -50,8 +50,8 @@
             <p class="popup-text">Add New List</p>
             <input type="text" id='listHeading' placeholder="Add New List">
         <div class="button-container">
-            <button type="button" onclick="addTodo()">Add</button>
-            <button type="button" onclick="Add_list_popup()">Close</button>
+            <button type="button" id="myBtn" onclick="addTodo()">Add</button>
+            <button type="button" id="myBtn-close" onclick="Add_list_popup()">Close</button>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
             <p class="popup-text">Add New Item</p>
             <input type="text" id='subListHeading' placeholder="Add New Item">
         <div class="button-container">
-            <button type="button" onclick="addSubTodo()">Add</button>
+            <button type="button" id="subtodo-myBtn" onclick="addSubTodo()">Add</button>
             <button type="button" onclick="Add_item_popup()">Close</button>
         </div>
     </div>
